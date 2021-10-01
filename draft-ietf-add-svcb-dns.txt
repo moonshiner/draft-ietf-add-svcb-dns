@@ -308,7 +308,7 @@ Table of Contents
    +========+=========+==============================+=================+
    | Number | Name    | Meaning                      | Reference       |
    +========+=========+==============================+=================+
-   | TBD    | dohpath | DNS over HTTPS path template | (This           |
+   | 7      | dohpath | DNS over HTTPS path template | (This           |
    |        |         |                              | document)       |
    +--------+---------+------------------------------+-----------------+
 
@@ -338,10 +338,7 @@ Table of Contents
               Layer Security (TLS)", RFC 7858, DOI 10.17487/RFC7858, May
               2016, <https://datatracker.ietf.org/doc/html/rfc7858>.
 
-   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
-              Requirement Levels", BCP 14, RFC 2119,
-              DOI 10.17487/RFC2119, March 1997,
-              <https://datatracker.ietf.org/doc/html/rfc2119>.
+   [RFC2119]  "*** BROKEN REFERENCE ***".
 
    [RFC6570]  Gregorio, J., Fielding, R., Hadley, M., Nottingham, M.,
               and D. Orchard, "URI Template", RFC 6570,
