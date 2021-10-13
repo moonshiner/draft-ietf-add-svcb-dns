@@ -4,8 +4,8 @@
 
 add                                                          B. Schwartz
 Internet-Draft                                                Google LLC
-Intended status: Standards Track                          1 October 2021
-Expires: 4 April 2022
+Intended status: Standards Track                         13 October 2021
+Expires: 16 April 2022
 
 
                 Service Binding Mapping for DNS Servers
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 April 2022.
+   This Internet-Draft will expire on 16 April 2022.
 
 Copyright Notice
 
@@ -116,10 +116,10 @@ Table of Contents
 
 3.  Name form
 
-   Names are formed using Port-Prefix Naming ([SVCB] Section 2.3), with
-   a scheme of "dns".  For example, SVCB records for a DNS service
-   identified as dns1.example.com would be located at
-   _dns.dns1.example.com.
+   Names are formed using Port-Prefix Naming (Section 2.3 of [SVCB]),
+   with a scheme of "dns".  For example, SVCB records for a DNS service
+   identified as "dns1.example.com" would be located at
+   "_dns.dns1.example.com".
 
 3.1.  Special case: non-default ports
 
@@ -135,8 +135,8 @@ Table of Contents
    When a non-default port number is part of a service identifier, Port-
    Prefix Naming places the port number in an additional a prefix on the
    name.  For example, SVCB records for a DNS service identified as
-   dns1.example.com:9953 would be located at
-   _9953._dns.dns1.example.com.  If two DNS services operating on
+   "dns1.example.com:9953" would be located at
+   "_9953._dns.dns1.example.com".  If two DNS services operating on
    different port numbers provide different behaviors, this arrangement
    allows them to preserve the distinction when specifying alternative
    endpoints.
@@ -145,9 +145,9 @@ Table of Contents
 
 4.1.  alpn
 
-   This key indicates the set of supported protocols ([SVCB]
-   Section 6.1).  There is no default protocol, so the no-default-alpn
-   key does not apply, and the alpn key MUST be present.
+   This key indicates the set of supported protocols (Section 6.1 of
+   [SVCB]).  There is no default protocol, so the no-default-alpn key
+   does not apply, and the alpn key MUST be present.
 
    If the protocol set contains any HTTP versions (e.g. "h2", "h3"),
    then the record indicates support for DNS over HTTPS [DOH], and the
@@ -162,10 +162,10 @@ Table of Contents
 
 4.2.  port
 
-   This key is used to indicate the target port for connection (([SVCB]
-   Section 6.2)).  If omitted, the client SHALL use the default port for
-   each transport protocol (853 for DNS over TLS [DOT], 443 for DNS over
-   HTTPS).
+   This key is used to indicate the target port for connection
+   ((Section 6.2 of [SVCB])).  If omitted, the client SHALL use the
+   default port for each transport protocol (853 for DNS over TLS [DOT],
+   443 for DNS over HTTPS).
 
    This key is automatically mandatory if present.  (See Section 7 of
    [SVCB] for the definition of "automatically mandatory".)
@@ -338,7 +338,10 @@ Table of Contents
               Layer Security (TLS)", RFC 7858, DOI 10.17487/RFC7858, May
               2016, <https://datatracker.ietf.org/doc/html/rfc7858>.
 
-   [RFC2119]  "*** BROKEN REFERENCE ***".
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://datatracker.ietf.org/doc/html/rfc2119>.
 
    [RFC6570]  Gregorio, J., Fielding, R., Hadley, M., Nottingham, M.,
               and D. Orchard, "URI Template", RFC 6570,
@@ -352,9 +355,9 @@ Table of Contents
    [SVCB]     Schwartz, B., Bishop, M., and E. Nygren, "Service binding
               and parameter specification via the DNS (DNS SVCB and
               HTTPS RRs)", Work in Progress, Internet-Draft, draft-ietf-
-              dnsop-svcb-https-07, 5 August 2021,
+              dnsop-svcb-https-08, 12 October 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-dnsop-
-              svcb-https-07>.
+              svcb-https-08>.
 
 10.2.  Informative References
 
