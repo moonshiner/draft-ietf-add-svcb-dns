@@ -200,7 +200,7 @@ Table of Contents
    support for HTTP, clients MAY construct a DNS over HTTPS URI Template
    by combining the prefix "https://", the authentication name, the port
    from the "port" key if present, and the "dohpath" value.  (The
-   binding authority's original port number MUST NOT be used.)
+   binding authority's port number MUST NOT be used.)
 
    Clients SHOULD NOT query for any "HTTPS" RRs when using the
    constructed URI Template.  Instead, the SvcParams and address records
